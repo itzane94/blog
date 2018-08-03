@@ -104,14 +104,6 @@
                     align:'center'
                 },
                 {
-                    title:'封面',
-                    field:'cover',
-                    align:'center',
-                    formatter:function (value,row,index) {
-                    return '<img class="img-thumbnail" src="'+row.cover+'" width="120" height="90"/>';
-                    }
-                },
-                {
                     title:'类型',
                     field:'type',
                     align:'center',
