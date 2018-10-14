@@ -145,7 +145,7 @@
                     </a>
                 </li>
                 <li><a data-toggle="tab" href="#tab-3">
-                        聊天
+                        待定
                     </a>
                 </li>
             </ul>
@@ -253,6 +253,7 @@
 <!-- 自定义js -->
 <script src="/admin/js/hplus.js?v=4.1.0"></script>
 <script type="text/javascript" src="/admin/js/contabs.js"></script>
+<script type="text/javascript" src="/js/vue.js"></script>
 
 <!-- 第三方插件 -->
 <script src="/admin/js/plugins/pace/pace.min.js"></script>
@@ -267,6 +268,23 @@
             content: "{{url('/admin/info')}}", //iframe的url
         });
     }
+    $(function(){
+        var vue = new Vue({
+            el:'#tab-2',
+            data:{
+
+            },
+            method:{
+
+            },
+            created:function(){
+                $.getJSON("{{url('/admin/echo/square')}}",function (items) {
+                    this.tags=items;
+                }.bind(this));
+            }
+
+        });
+    });
 </script>
 </body>
 

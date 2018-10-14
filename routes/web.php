@@ -48,6 +48,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function(){
     Route::post('/setting/tips/add','Setting\TipsController@tip_add');
     Route::post('/setting/tips/save/{tips}','Setting\TipsController@tip_save');
     Route::get('/setting/tips/delete/{tips}','Setting\TipsController@tip_delete');
+    Route::get('/echo/square','Dashboard\DashboardController@square');
 
 });
 Route::get('/','Home\HomepageController@index');
